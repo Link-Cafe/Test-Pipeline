@@ -2,14 +2,14 @@
 #!/bin/bash
 
 # Configuration
-PROJECT_ID = "your_project_id"
-BUCKET_NAME = "gs://$PROJECT_ID.appspot.com"
-EMULATOR_DATA_DIR = "./emulator_data"
-AUTH_EXPORT_FILE = "$EMULATOR_DATA_DIR/auth/users.json"
-SERVICE_ACCOUNT_KEY = "path/to/serviceAccountKey.json"
+PROJECT_ID="your_project_id"
+BUCKET_NAME="gs://$PROJECT_ID.appspot.com"
+EMULATOR_DATA_DIR="./emulator_data"
+PRIVATE_KEY_PATH="path/to/serviceAccountKey.json"
+FIREBASE_SDK_ADMIN_KEY_DIR="./secrets/$PRIVATE_KEY_PATH"
 
 # Force gsutil to use specific Python version. Should be 3.5.xx or 3.11.xx
-export CLOUDSDK_PYTHON="path/to/python311.exe"
+export CLOUDSDK_PYTHON="path/to/python35xx-311xx.exe"
 
 # Step 1: Export Firestore data to Google Cloud
 if gsutil ls -b "$BUCKET_NAME" > /dev/null 2>&1; then
