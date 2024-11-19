@@ -1,5 +1,5 @@
 
-# Test Pipeline
+# Test Script
 
 ## ONLY FOR DEV AND TEST ENVIRONMENTS
 
@@ -41,5 +41,5 @@ link_cafe
 ## Usage
 
 ```bash
-./test_pipeline.sh
+./test.sh
 ```
